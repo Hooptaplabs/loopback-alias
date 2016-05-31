@@ -1,6 +1,6 @@
 {
 	"name": "loopback-alias-middleware",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A simple loopback middleware to create url alias",
 	"main": "dist/index.js",
 	"scripts": {
