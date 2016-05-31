@@ -1,0 +1,40 @@
+{
+	"name": "loopback-alias-middleware",
+	"version": "1.0.6",
+	"description": "A simple loopback middleware to create url alias",
+	"main": "dist/index.js",
+	"scripts": {
+		"build": "babel src --out-dir tmp-babel && node ./scripts/uglify && rimraf tmp-babel",
+		"lint": "eslint ./src && eslint ./test/*",
+		"test": "mocha --compilers js:babel-register",
+		"test:min": "mocha --compilers js:babel-register --reporter dot",
+		"test:watch": "mocha --compilers js:babel-register --watch --reporter dot",
+		"test:cover": "babel-node ./node_modules/.bin/isparta cover ./node_modules/.bin/_mocha -- --reporter min",
+		"all": "npm run --silent lint && npm run test:min && npm run --silent build && echo '' && echo 'Lint Ok. Test Ok. Build Ok.'"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Hooptaplabs/loopback-alias-middleware.git"
+	},
+	"author": "Roger Fos Soler (desaroger23@gmail.com)",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Hooptaplabs/loopback-alias-middleware/issues"
+	},
+	"homepage": "https://github.com/Hooptaplabs/loopback-alias-middleware#readme",
+	"devDependencies": {
+		"babel-cli": "^6.9.0",
+		"babel-preset-es2015": "^6.9.0",
+		"babel-register": "^6.9.0",
+		"chai": "^3.5.0",
+		"eslint": "^2.11.0",
+		"eslint-config-loopback": "^4.0.0",
+		"isparta": "^4.0.0",
+		"istanbul": "^0.4.3",
+		"jasmine-node": "^1.14.5",
+		"lodash": "^4.13.1",
+		"mocha": "^2.5.3",
+		"node-uglifier": "^0.4.5",
+		"rimraf": "^2.5.2"
+	}
+}
